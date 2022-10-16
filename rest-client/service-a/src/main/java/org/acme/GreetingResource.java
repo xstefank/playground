@@ -47,10 +47,9 @@ public class GreetingResource {
 
         LOGGER.info(helloBean.getHello("PV217"));
 
-        String s = serviceB.customHeader();
         span.end();
 
-        return "Received " + s;
+        return "Received " + serviceB.customHeader();
     }
 
     public String fallbackHello() {
